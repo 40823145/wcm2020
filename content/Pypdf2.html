@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='每周上課內容.html'>每周上課內容</a><li><a href='Python.html'>Python</a><li><a href='W11.html'>W11</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='每周上課內容.html'>每周上課內容</a><li><a href='Python.html'>Python</a><li><a href='Pypdf2.html'>Pypdf2</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,10 +154,72 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Python << <a href='Python.html'>Previous</a> <br /><h1>W11</h1>
+    <div id="tipue_search_content">Python << <a href='Python.html'>Previous</a> <br /><h1>Pypdf2</h1>
 <p></p>
-<p><a href="/get_page/%E7%BF%BB%E8%AD%AF/&lt;form%20action='https:/dictionary.cambridge.org/zht/%E6%90%9C%E7%B4%A2/%E8%8B%B1%E5%BC%8F%E8%8B%B1%E8%AA%9E/direct/?utm_source=widget_searchbox_source&amp;utm_medium=widget_searchbox&amp;utm_campaign=widget_tracking' method='post'&gt; &lt;table style='font-size:10px;background:#292929;border-collapse:collapse;border-spacing:0;width:150px;' &gt; &lt;tbody&gt; &lt;tr&gt; &lt;td colspan='2' style='padding:0;background:none;border:none;'&gt; &lt;a href='https://dictionary.cambridge.org/zht/' style='display:block; background: transparent url(/zht/external/images/freesearch/sbl.png?version=5.0.75) no-repeat 5px 6px;height:32px;'&gt;&lt;/a&gt; &lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td style='width:68px;background:none;border:none;padding:4px;'&gt; &lt;input style='width:100%;display:block;font-size:10px;padding:2px;border:none;' name='q' /&gt; &lt;/td&gt; &lt;td style='width:50px;background:none;border:none;padding:0 4px 0 0;'&gt; &lt;input style='width:100%;display:block;font-size:10px;padding:2px;border:none;float:right;background:#d0a44c;' type='submit' value='Look it up' /&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/form&gt;" title="翻譯"><code class="xhtml plain"></code></a></p>
-<div id="gtx-trans" style="position: absolute; left: -25px; top: 1136.2px;">
+<p><strong>擷取一段</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex1.py
+import os
+from PyPDF2 import PdfFileWriter, PdfFileReader
+
+pdfReader = PdfFileReader(open("2002_Book_Real-WorldASPNETBuildingAConte.pdf", "rb"))
+#欲擷取pdf名稱
+information = [("WhatIsCMS",18,45)]
+#擷取頁數
+
+for page in range(len(information)):
+    pdf_writer = PdfFileWriter()
+    start = information[page][1]
+    end = information[page][2]
+    while start&lt;=end:
+        pdf_writer.addPage(pdfReader.getPage(start-1))
+        start+=1
+    if not os.path.exists("./"):
+        os.makedirs(savepath)
+    output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])
+    with open(output_filename,'wb') as out:
+        pdf_writer.write(out)
+</pre>
+<p><strong>擷取兩段</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex2.py
+import os
+from PyPDF2 import PdfFileWriter, PdfFileReader
+
+pdfReader = PdfFileReader(open("Beginning-Git-and-GitHub.pdf", "rb"))
+information = [("GitAndGithub",17,105),("GitAndGithub",107,194),("GitAndGithub",196,289)]
+
+for page in range(len(information)):
+    pdf_writer = PdfFileWriter()
+    start = information[page][1]
+    end = information[page][2]
+    while start&lt;=end:
+        pdf_writer.addPage(pdfReader.getPage(start-1))
+        start+=1
+    if not os.path.exists("./"):
+        os.makedirs(savepath)
+    output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])
+    with open(output_filename,'wb') as out:
+        pdf_writer.write(out)
+</pre>
+<p><strong>合併</strong></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex3.py
+# merge several pdf files
+import sys
+import PyPDF2
+
+pdf_write_object = PyPDF2.PdfFileWriter()
+
+#for i in sys.argv[1:]:
+for i in ["WhatIsCMS.pdf","InforLifeCycle.pdf","EnterpriseContentManage.pdf"]:
+    pdf_read_object = PyPDF2.PdfFileReader(i)
+    print('processing file : '+ i + 'number of pages : ' +  str(pdf_read_object.numPages))
+    for page in range(pdf_read_object.numPages):
+        pdf_write_object.addPage(pdf_read_object.getPage(page))
+
+final_file_object = open('2020CMS.pdf', 'wb')
+pdf_write_object.write(final_file_object)
+final_file_object.close()
+</pre>
+<div id="gtx-trans" style="position: absolute; left: 13px; top: 515.4px;">
 <div class="gtx-trans-icon"></div>
 </div><br />Python << <a href='Python.html'>Previous</a> </div>
         

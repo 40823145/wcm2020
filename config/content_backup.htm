@@ -14,15 +14,14 @@
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
 <h1>每周上課內容</h1>
-<p>w1~w6:建立隨身系統</p>
-<p>w7:(1.)建立網站 (2.)設定 OBS、Youtube直播</p>
-<div class="line number1 index0 alt2">W8~w9:線上課程、期中報告</div>
-<div class="line number1 index0 alt2"></div>
-<div class="line number1 index0 alt2">w10:Virtualbox Ubuntu</div>
-<div class="line number1 index0 alt2"></div>
-<div id="gtx-trans" style="position: absolute; left: 150px; top: 186.4px;">
-<div class="gtx-trans-icon"></div>
-</div><h1>Python</h1>
+<h4 style="text-align: left;"><strong>w1~w6:建立隨身系統</strong></h4>
+<h4 style="text-align: left;"><strong>w7:(1.)建立網站 (2.)設定 OBS、Youtube直播</strong></h4>
+<h4 class="line number1 index0 alt2" style="text-align: left;"><strong>w8~w9:線上課程、期中報告</strong></h4>
+<h4 class="line number1 index0 alt2" style="text-align: left;"><strong>w10~w14:Virtualbox Ubuntu</strong></h4>
+<h4 class="line number1 index0 alt2" style="text-align: left;"><strong>w15:pypdf2</strong></h4>
+<h4 class="line number1 index0 alt2" style="text-align: left;"><strong>w16~w18:使用Leo Editor將pypdf2變成網頁版</strong></h4>
+<p></p>
+<h1>Python</h1>
 <p>課程評分程式</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
 根據評分表單中的 自評分數, 互評得分, 教師評分, 計算學員課程成績
@@ -59,16 +58,17 @@ def 學員成績(自評分數, 互評得分, 教師評分):
 print(學員成績(80, 70, 60))
 print(學員成績(60, 70, 80))</pre>
 <p></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
-<p><button id="kw_run">Run</button></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <h1>Pypdf2</h1>
+<p></p>
+<p><strong>擷取一段</strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex1.py
 import os
 from PyPDF2 import PdfFileWriter, PdfFileReader
 
 pdfReader = PdfFileReader(open("2002_Book_Real-WorldASPNETBuildingAConte.pdf", "rb"))
+#欲擷取pdf名稱
 information = [("WhatIsCMS",18,45)]
+#擷取頁數
 
 for page in range(len(information)):
     pdf_writer = PdfFileWriter()
@@ -83,6 +83,7 @@ for page in range(len(information)):
     with open(output_filename,'wb') as out:
         pdf_writer.write(out)
 </pre>
+<p><strong>擷取兩段</strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex2.py
 import os
 from PyPDF2 import PdfFileWriter, PdfFileReader
@@ -103,6 +104,7 @@ for page in range(len(information)):
     with open(output_filename,'wb') as out:
         pdf_writer.write(out)
 </pre>
+<p><strong>合併</strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex3.py
 # merge several pdf files
 import sys
@@ -121,3 +123,8 @@ final_file_object = open('2020CMS.pdf', 'wb')
 pdf_write_object.write(final_file_object)
 final_file_object.close()
 </pre>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<h1>13</h1>
