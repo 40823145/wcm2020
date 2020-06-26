@@ -133,7 +133,7 @@ final_file_object.close()
 <p><span><img alt="" height="683" src="/images/註解 2020-06-20 100813.png" width="802"/></span></p>
 <p><span><img alt="" height="713" src="/images/註解 2020-06-20 100841.png" width="1103"/></span></p>
 <p></p>
-<br/><br/><br/><span></span>上課內容
+<h1>上課內容</h1>
 <h2>MBR與GPT</h2>
 <p><span><strong>MBR:</strong><span> </span>Master Boot Record 主開機記錄</span><span><br/>[啟動系統:<strong>BIOS</strong>]<br/>只適用於最大容量<span><strong><span>2TB的硬碟</span></strong></span>，如果使用容量更大的硬碟，則無法識別，同時MBR也只支援最大4個主分割區。<br/>現今的社會都是大容量的硬碟，所以使用MBR會被侷限。<br/><br/><strong>GPT:</strong><span> </span>GUID Partition Table (俗稱:GUID磁碟分割表格)</span><br/><span>[啟動系統:</span><strong>UEIF</strong><span>]</span><br/>GPT逐漸取代掉MBR，GPT使用了更現代的技術取代老舊的MBR磁碟分割表格。<br/>GPT的推出與<span> </span><span><strong>UEFI</strong></span><span> </span>是相輔相成的，<span>想要<strong><span>使用GPT</span></strong>就必須是<span><strong>UEFI的環境</strong></span></span>。</p>
 <p><strong><span>優勢: 1.</span></strong><span><span>突破了<strong>MBR</strong>最大只支援<strong>2T</strong>硬碟的限制<br/>         <strong><span><span> </span>2.</span></strong>允許無限數量的分割區不必創建擴展分區即可使其工作</span></span></p>
@@ -165,8 +165,37 @@ final_file_object.close()
 <p>URL為URI的子集，其為網際網路<span>上標準的<strong>資源的位址。</strong></span></p>
 <p><span><strong><span data-ttu-id="05b77-103">URN  統一資源名稱 (Uniform Resource Name)</span></strong></span></p>
 <p><span data-ttu-id="05b77-103"><strong>URN</strong>並非如<strong>URL</strong>一般是用於指示資源的位址，而是用來鑑別實體的唯一性，也就是以名稱當作識別的依據。</span></p>
+<p><span data-ttu-id="05b77-103"></span></p>
+<h1>建立個人網站</h1>
+<p><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">利用 Github Pages 與 CMSiMDE 建立個人網站</yt-formatted-string></p>
+<p>(1)進入<span>github 新建一個repository(資料庫)</span></p>
+<p><img caption="false" height="521" src="/images/註解 2020-06-24 205252.png" width="960"/></p>
+<p><span>(2)在隨身系統新建資料夾(test/data/tmp)</span></p>
+<p><span>(mkdir test)(cd test)(mkdir data)(cd data</span><span>)(mkdir tmp)</span></p>
+<p><span><img caption="false" height="538" src="/images/註解 2020-06-24 21100411111.png" width="960"/></span></p>
+<p><span></span>(3)git clone自己倉儲的網址完成後<span>git submodule add</span></p>
+<p><span><img caption="false" height="521" src="/images/註解 2020-06-24 211339.png" width="960"/></span></p>
+<p><img caption="false" height="521" src="/images/註解 2020-06-24 211354.png" width="960"/></p>
+<p><img caption="false" height="497" src="/images/22222.png" width="960"/></p>
+<p><span>(4)進入cmsimde  把up_dir裡的東西全部複製</span></p>
+<p><span><img caption="false" height="521" src="/images/123456.png" width="960"/></span></p>
+<p><span>放到cmsimde外面  test目錄下</span></p>
+<p><span><img caption="false" height="521" src="/images/987456.png" width="960"/></span></p>
+<p><span>(5)進入cmsimde將wsgi.py拖入SciTE     tools--&gt;go</span></p>
+<h1>ssh key</h1>
 <p></p>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false"></pre>
-<div id="gtx-trans" style="position: absolute; left: 6px; top: 5903px;">
+<p><span>隨身系統輸入sh</span></p>
+<p><span>輸入ssh-keygen -t rsa -b 4096 -C "學號"<img alt="" height="1033" src="/images/sh.png" width="960"/></span></p>
+<p><span>預設之儲存在y:\home\.ssh目錄裡</span></p>
+<p><span><img alt="" height="1033" src="/images/ssh.png" width="960"/></span></p>
+<p>使用puttygen將private key(id_rsa)導入，並轉換為putty能夠讀懂的格式(.ppk)檔案</p>
+<p>存好(.ppk)檔後<img alt="" height="720" src="/images/puttyg.png" width="718"/></p>
+<p><span>使用scite將public key (id_rsa.pub)打開，到工具列找到Options內Wrap就能看建完整的檔案內容<img alt="" height="1033" src="/images/pub.png" width="960"/></span></p>
+<p><span>將public key內容複製，進入github右上角下拉選單點擊settings<img caption="false" height="517" src="/images/ssh setting.png" width="960"/></span></p><h1>ssh putty</h1>
+<p>開啟putty</p>
+<p><img alt="" height="649" src="/images/puttygit.png" width="651"/></p>
+<p><span>選擇前面步驟所生成之.ppk檔案</span></p><h1>pelican建立blog</h1>
+<p><span></span></p>
+<div id="gtx-trans" style="position: absolute; left: 9px; top: 12412px;">
 <div class="gtx-trans-icon"></div>
 </div>
