@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>wcm2020網際內容管理 - Misc</title><link href="./" rel="alternate"></link><link href=".%5Cfeeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2020-06-26T11:00:00+08:00</updated><entry><title>wcm2020 VirtualBox</title><link href=".%5Cwcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-26T11:00:00+08:00</published><updated>2020-06-26T11:00:00+08:00</updated><author><name>40823145</name></author><id>tag:None,2020-06-26:.\wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>wcm2020網際內容管理 - Misc</title><link href="https://40823145.github.io/blog/" rel="alternate"></link><link href="https://40823145.github.io/blog%5Cfeeds/misc.atom.xml" rel="self"></link><id>https://40823145.github.io/blog/</id><updated>2020-06-26T11:00:00+08:00</updated><entry><title>wcm2020 VirtualBox</title><link href="https://40823145.github.io/blog%5Cwcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-26T11:00:00+08:00</published><updated>2020-06-26T11:00:00+08:00</updated><author><name>40823145</name></author><id>tag:40823145.github.io,2020-06-26:/blog\wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;hr&gt;
 &lt;p&gt;VirtualBox
@@ -9,7 +9,17 @@ Oracle VirtualBox是由德國InnoTek軟體公司出品的虛擬機器軟體，�
 建立虛擬機名稱，選取欲安裝系統
 設定虛擬機記憶體大小，通常給4096MB
 選擇儲存位置分配儲存空間，通常500GB
-選取下載的系統映像檔，進行後續開機動作&lt;/p&gt;</content><category term="Misc"></category><category term="wcm2020"></category></entry><entry><title>wcm2020 VirtualBox</title><link href=".%5Cwcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-26T11:00:00+08:00</published><updated>2020-06-26T11:00:00+08:00</updated><author><name>40823145</name></author><id>tag:None,2020-06-26:.\wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+選取下載的系統映像檔，進行後續開機動作&lt;/p&gt;</content><category term="Misc"></category><category term="wcm2020"></category></entry><entry><title>wcm2020 VirtualBox</title><link href="https://40823145.github.io/blog%5Cwcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-26T11:00:00+08:00</published><updated>2020-06-26T11:00:00+08:00</updated><author><name>40823145</name></author><id>tag:40823145.github.io,2020-06-26:/blog\wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;hr&gt;
+&lt;p&gt;VirtualBox
+Oracle VirtualBox是由德國InnoTek軟體公司出品的虛擬機器軟體，現在則由甲骨文公司進行開發，是甲骨文公司xVM虛擬化平臺技術的一部份。它提供使用者在32位元或64位元的Windows、Solaris及Linux 作業系統上虛擬其它x86的作業系統。&lt;/p&gt;
+&lt;p&gt;網路上下載不同系統的iso映像檔
+開啟VirtualBox按新增
+建立虛擬機名稱，選取欲安裝系統
+設定虛擬機記憶體大小，通常給4096MB
+選擇儲存位置分配儲存空間，通常500GB
+選取下載的系統映像檔，進行後續開機動作&lt;/p&gt;</content><category term="Misc"></category><category term="wcm2020"></category></entry><entry><title>wcm2020 VirtualBox</title><link href="https://40823145.github.io/blog%5Cwcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-26T11:00:00+08:00</published><updated>2020-06-26T11:00:00+08:00</updated><author><name>40823145</name></author><id>tag:40823145.github.io,2020-06-26:/blog\wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;hr&gt;
 &lt;p&gt;VirtualBox
